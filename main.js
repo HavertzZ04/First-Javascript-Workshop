@@ -1,4 +1,17 @@
+/*! Este codigo ejecuta un programa que caulcula el nivel academinico de un estudiante
+segun sus calificaciones, este codigo convierte calificaciones en formato tradicional,
+rango y sbg.
+
+
+/*La funcion ¨main¨ contiene todo el codigo que ejecuta el programa,
+esta funcion fue agregada al final de cada tipo de formato de evaluacion para poder
+reiniciar el programa en caso de que el usuario agregue un valor invalido.*/
+
 function main() {
+
+    /* La constante ¨tabla¨ tiene una tabla que contiene el valor de cada formato
+    de calificacion*/
+
     const tabla = [
         {tradicional: "90-100", range: "12-14", letter: "A", rating: "4", mensaje:"Excelente"},
         {tradicional: "80-89", range: "9-11", letter: "B", rating: "3", mensaje:"Casi excelente"},
@@ -10,6 +23,9 @@ function main() {
 
     console.table(tabla)
 
+    /*la variable ẗipoDeNota¨ le pregunta al usuario, que tipo de formato de calificacion
+    desea, tradicional, rango o sbg* (Si el usuario ingresa un valor invalido, el programa
+    se reinicia*/
 
     console.table(tabla);
     tipoDeNota = prompt("Selcciona el formato (Tradicional: 1 // range: 2 // sbg: 3)");
@@ -30,6 +46,8 @@ function main() {
         alert("Formato incorrecto, presiona ENTER para iniciar de nuevo")
         main()}
 
+    /*La funcion ¨tradicional¨ ayuda a convertir formato tradicional
+    a formato tipo letra (El programa se reinicia si el usuario ingresa un valor invalido)*/
 
     function tradicional (){
         if (nota >= 90 && nota <= 100){
@@ -54,7 +72,9 @@ function main() {
             alert("Ingresa un NUMERO entre 0 hasta 100, presiona ENTER para inciar de nuevo")
             main()}
     }
-
+    /*La funcion ¨range¨ ayuda a convertir formato tipo rango
+    a formato tipo letra (El programa se reinicia si el usuario ingresa un valor invalido)*/
+    
     function range(){
         if (nota >= 12 && nota <= 14){
         alert(`Tu calificacion es ${tabla[0].letter} y tu promedio es ${tabla[0].mensaje}`);
@@ -79,6 +99,9 @@ function main() {
             main()}
     }
 
+    /*La funcion ¨sbg¨ ayuda a convertir formato sbg
+    a formato tipo letra (El programa se reinicia si el usuario ingresa un valor invalido)*/
+    
     function sbg (){
         if (nota === "4"){
         alert(`Tu calificacion es ${tabla[0].letter} y tu promedio es ${tabla[0].mensaje}`);
