@@ -27,7 +27,6 @@ function main() {
     desea, tradicional, rango o sbg* (Si el usuario ingresa un valor invalido, el programa
     se reinicia*/
 
-    console.table(tabla);
     tipoDeNota = prompt("Selcciona el formato (Tradicional: 1 // range: 2 // sbg: 3)");
 
     if (tipoDeNota === "1"){
