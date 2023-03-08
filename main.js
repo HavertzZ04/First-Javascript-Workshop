@@ -1,4 +1,4 @@
-/*! Este codigo ejecuta un programa que caulcula el nivel academinico de un estudiante
+/*Este codigo ejecuta un programa que calcula el nivel academinico de un estudiante
 segun sus calificaciones, este codigo convierte calificaciones en formato tradicional,
 rango y sbg.
 
